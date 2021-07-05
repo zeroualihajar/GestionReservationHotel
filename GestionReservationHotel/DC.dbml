@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ReservationHotel" Class="DCDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=desktop-7n0goof;Initial Catalog=ReservationHotel;Integrated Security=True" SettingsObjectName="GestionReservationHotel.Properties.Settings" SettingsPropertyName="ReservationHotelConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.client" Member="client">
+    <Type Name="client">
+      <Column Name="idclient" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nomclient" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="prenomclient" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="telephone" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Association Name="client_reservation" Member="reservation" ThisKey="idclient" OtherKey="idreservation" Type="reservation" Cardinality="One" />
+    </Type>
+  </Table>
+  <Table Name="dbo.hotel" Member="hotel">
+    <Type Name="hotel">
+      <Column Name="idhotel" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nomhotel" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="adresse" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="hotel_chambre" Member="chambre" ThisKey="idhotel" OtherKey="idhotel" Type="chambre" />
+    </Type>
+  </Table>
+  <Table Name="dbo.reservation" Member="reservation">
+    <Type Name="reservation">
+      <Column Name="idreservation" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="debutreservation" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="finreservation" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="montant" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="idclient" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="idchambre" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Association Name="client_reservation" Member="client" ThisKey="idreservation" OtherKey="idclient" Type="client" IsForeignKey="true" />
+      <Association Name="chambre_reservation" Member="chambre" ThisKey="idreservation" OtherKey="idchambre" Type="chambre" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.chambre" Member="chambre">
+    <Type Name="chambre">
+      <Column Name="idchambre" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="etage" Type="System.String" DbType="NText NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="typechambre" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="idhotel" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="prix" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Association Name="chambre_reservation" Member="reservation" ThisKey="idchambre" OtherKey="idreservation" Type="reservation" Cardinality="One" />
+      <Association Name="hotel_chambre" Member="hotel" ThisKey="idhotel" OtherKey="idhotel" Type="hotel" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
