@@ -107,6 +107,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="UC\ucChambre.resx">
       <DependentUpon>ucChambre.cs</DependentUpon>
@@ -135,8 +136,21 @@
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="images\" />
+    <None Include="images\chambre.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\hotel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\pen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\client.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\open.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

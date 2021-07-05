@@ -29,7 +29,6 @@ namespace GestionReservationHotel
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Information));
             this.lblNom = new System.Windows.Forms.Label();
             this.lblPrenom = new System.Windows.Forms.Label();
             this.lblMontant = new System.Windows.Forms.Label();
@@ -192,7 +191,7 @@ namespace GestionReservationHotel
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Image = global::GestionReservationHotel.Properties.Resources.client;
             this.pictureBox1.Location = new System.Drawing.Point(168, 9);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(113, 105);
