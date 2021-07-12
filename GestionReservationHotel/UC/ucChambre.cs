@@ -52,18 +52,14 @@ namespace GestionReservationHotel
             {
 
             }
-            
-            
+
 
             //this.BackgroundImage = global::GestionReservationHotel.Properties.Resources.open;
-
-
         }
 
         private void detailToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Information info = new Information(idChambre);
-           // info.Visible = true;
         }
     }
 }

@@ -57,7 +57,7 @@ namespace GestionReservationHotel
 
                 Reservation res = new Reservation(debut, fin, montant, idClient, int.Parse(c.idchambre.ToString()));
 
-                //---- Declarer la requete d'insertion du client
+                //---- Declarer la requete d'insertion du reservation
                 SqlCommand cmd2 = new SqlCommand("INSERT INTO reservation VALUES ('" + res.debut + "', '" + res.fin + "', '" + montant + "', '" + res.idClient + "', '" + res.idChambre + "')", connect);
 
                 //---- Executer la commande
@@ -66,16 +66,12 @@ namespace GestionReservationHotel
                 //---- Fermer la connexion
                 connect.Close();
                 this.Hide();
-                
-
             }
-
         }
 
         private int InsertClient(string nom, string prenom, int telephone, SqlConnection connect)
         {
             int id = 0;
-            //------ Insertion dans la base de client
             Client client = new Client(nom, prenom, telephone);
             
             //---- Declarer la requete d'insertion du client
@@ -106,7 +102,7 @@ namespace GestionReservationHotel
        
             chambre ch = new chambre();
             
-            //---- Declarer la requete d'insertion du client
+            //---- Declarer la requete de selection de la chambre
             SqlCommand cmd = new SqlCommand("SELECT * From chambre ch WHERE ch.idchambre = "+idCh, connect);
 
             //---- Exécuter la  commande sur la base de données 

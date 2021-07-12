@@ -55,8 +55,6 @@ namespace GestionReservationHotel
                     //---- Fermer la connexion
                     connect.Close();
                 }
-
-                
             }
             catch (Exception ex)
             {
@@ -72,7 +70,7 @@ namespace GestionReservationHotel
         {
             reservation rs = new reservation();
             
-            //---- Declarer la requete d'insertion du client
+            //---- Declarer la requete de selection d'une reservation
             SqlCommand cmd = new SqlCommand("SELECT * From reservation rs WHERE rs.idchambre = " + id, connect);
 
             //---- Exécuter la  commande sur la base de données 
@@ -96,7 +94,7 @@ namespace GestionReservationHotel
         public client getClientByID(int id, SqlConnection connect)
         {
             client c = new client();
-            //---- Declarer la requete d'insertion du client
+            //---- Declarer la requete de selection du client
             SqlCommand cmd = new SqlCommand("SELECT * From client c WHERE c.idclient = " + id, connect);
 
             //---- Exécuter la  commande sur la base de données 

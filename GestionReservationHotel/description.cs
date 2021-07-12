@@ -31,6 +31,7 @@ namespace GestionReservationHotel
             chambre ch = new chambre();
             ch = getChambreById(idChambre, connect);
 
+            //---- La selection d'un hotel en utilisant id
             hotel ht = new hotel();
             ht = getHotelById((int)ch.idhotel, connect);
             
@@ -75,7 +76,7 @@ namespace GestionReservationHotel
         {
             hotel ht = new hotel();
 
-            //---- Declarer la requete d'insertion du client
+            //---- Declarer la requete de selection d'un hotel
             SqlCommand cmd = new SqlCommand("SELECT * From hotel h WHERE h.idhotel = " + idHot, connect);
 
             //---- Exécuter la  commande sur la base de données 
