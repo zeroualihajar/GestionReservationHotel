@@ -22,7 +22,7 @@ namespace GestionReservationHotel
         public void des(int idChambre)
         {
             //---- Creer  la connexion vers la base des données
-            SqlConnection connect = new SqlConnection(@"Data Source=DESKTOP-7N0GOOF; Initial Catalog=ReservationHotel; Integrated Security =True");
+            SqlConnection connect = new SqlConnection(@"Data Source=localhost; Initial Catalog=ReservationHotel; Integrated Security =True");
 
             //---- Ouvrir la connexion
             connect.Open();
@@ -37,7 +37,7 @@ namespace GestionReservationHotel
             //---- Fermer la connexion
             connect.Close();
 
-
+            //---- Remplissage des donnees
             lblId.Text = ch.idchambre.ToString();
             lblEtage.Text = ch.etage.ToString();
             lblCategorie.Text = ch.typechambre.ToString();
@@ -50,7 +50,7 @@ namespace GestionReservationHotel
         {
             chambre ch = new chambre();
 
-            //---- Declarer la requete d'insertion du client
+            //---- Declarer la requete de selection du chambre selon son id
             SqlCommand cmd = new SqlCommand("SELECT * From chambre ch WHERE ch.idchambre = " + idCh, connect);
 
             //---- Exécuter la  commande sur la base de données 

@@ -12,3 +12,5 @@ C:\Users\Probook\Desktop\LSI\Technologie .net\Projet\GestionReservationHotel\Ges
 C:\Users\Probook\Desktop\LSI\Technologie .net\Projet\GestionReservationHotel\GestionReservationHotel\obj\Debug\GestionReservationHotel.csproj.CoreCompileInputs.cache
 C:\Users\Probook\Desktop\LSI\Technologie .net\Projet\GestionReservationHotel\GestionReservationHotel\obj\Debug\GestionReservationHotel.exe
 C:\Users\Probook\Desktop\LSI\Technologie .net\Projet\GestionReservationHotel\GestionReservationHotel\obj\Debug\GestionReservationHotel.pdb
+C:\Users\Probook\Desktop\LSI\Technologie .net\Projet\GestionReservationHotel\GestionReservationHotel\obj\Debug\GestionReservationHotel.Liberer.resources
+C:\Users\Probook\Desktop\LSI\Technologie .net\Projet\GestionReservationHotel\GestionReservationHotel\obj\Debug\GestionReservationHotel.UC.ucClient.resources

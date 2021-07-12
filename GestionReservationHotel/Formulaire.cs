@@ -18,7 +18,7 @@ namespace GestionReservationHotel
         public int idCh;
 
         //---- Creer  la connexion vers la base des données
-        SqlConnection connect = new SqlConnection(@"Data Source=DESKTOP-7N0GOOF; Initial Catalog=ReservationHotel; Integrated Security =True");
+        SqlConnection connect = new SqlConnection(@"Data Source=localhost; Initial Catalog=ReservationHotel; Integrated Security =True");
         public Formulaire(int idChambre)
         {
             idCh = idChambre;
@@ -66,6 +66,8 @@ namespace GestionReservationHotel
                 //---- Fermer la connexion
                 connect.Close();
                 this.Hide();
+                
+
             }
 
         }
@@ -138,8 +140,7 @@ namespace GestionReservationHotel
             //---- Ouvrir la connexion
             connect.Open();
 
-            //---- Declarer la requete d'insertion du client
-            
+            //---- Declarer la requete des selection de reservation
             SqlCommand cmd = new SqlCommand("SELECT * From reservation rs WHERE rs.idchambre = " + id, connect);
 
             //---- Exécuter la  commande sur la base de données 
@@ -168,6 +169,14 @@ namespace GestionReservationHotel
             foreach (reservation res in reservations)
             {
                 if ((res.debutreservation >= debut) && (res.finreservation <= fin))
+                {
+                    return true;
+                }
+                else if (debut < res.finreservation && debut >= res.debutreservation)
+                {
+                    return true;
+                }
+                else if (fin > res.debutreservation && fin <= res.finreservation)
                 {
                     return true;
                 }

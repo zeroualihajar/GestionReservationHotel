@@ -27,6 +27,10 @@ namespace GestionReservationHotel
             {
                 ucChambre uc = new ucChambre();
                 uc.idChambre = int.Parse(ch.idchambre.ToString());
+                /*if (Exist(uc.idChambre))
+                {
+                    uc.BackgroundImage = global::GestionReservationHotel.Properties.Resources.close;
+                }*/
                 flowPanel.Controls.Add(uc);
             }
             
@@ -36,6 +40,19 @@ namespace GestionReservationHotel
         {
             InitializeComponent();
             afficher();
+        }
+
+        //---- Verifier si la chambre est reserve
+        public bool Exist(int id)
+        {
+            List<reservation> res = new List<reservation>();
+            res = bd.reservation.ToList();
+
+            foreach (reservation r in res)
+            {
+                if (r.idchambre == id) return true;
+            }
+            return false;
         }
     }
 }

@@ -22,7 +22,7 @@ namespace GestionReservationHotel
         public void info(int idChambre)
         {
             //---- Creer  la connexion vers la base des données
-            SqlConnection connect = new SqlConnection(@"Data Source=DESKTOP-7N0GOOF; Initial Catalog=ReservationHotel; Integrated Security =True");
+            SqlConnection connect = new SqlConnection(@"Data Source=localhost; Initial Catalog=ReservationHotel; Integrated Security =True");
 
             connect.Open();
             try

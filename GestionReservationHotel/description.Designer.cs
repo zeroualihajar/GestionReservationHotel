@@ -51,9 +51,8 @@ namespace GestionReservationHotel
             this.lblEtage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.lblEtage.Location = new System.Drawing.Point(327, 153);
             this.lblEtage.Name = "lblEtage";
-            this.lblEtage.Size = new System.Drawing.Size(60, 23);
+            this.lblEtage.Size = new System.Drawing.Size(0, 23);
             this.lblEtage.TabIndex = 22;
-            this.lblEtage.Text = "Etage";
             // 
             // lblCategorie
             // 
@@ -62,9 +61,8 @@ namespace GestionReservationHotel
             this.lblCategorie.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.lblCategorie.Location = new System.Drawing.Point(327, 199);
             this.lblCategorie.Name = "lblCategorie";
-            this.lblCategorie.Size = new System.Drawing.Size(60, 23);
+            this.lblCategorie.Size = new System.Drawing.Size(0, 23);
             this.lblCategorie.TabIndex = 21;
-            this.lblCategorie.Text = "Etage";
             // 
             // lblPrix
             // 
@@ -73,9 +71,8 @@ namespace GestionReservationHotel
             this.lblPrix.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.lblPrix.Location = new System.Drawing.Point(327, 296);
             this.lblPrix.Name = "lblPrix";
-            this.lblPrix.Size = new System.Drawing.Size(60, 23);
+            this.lblPrix.Size = new System.Drawing.Size(0, 23);
             this.lblPrix.TabIndex = 20;
-            this.lblPrix.Text = "Etage";
             // 
             // lblHotel
             // 
@@ -84,9 +81,8 @@ namespace GestionReservationHotel
             this.lblHotel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.lblHotel.Location = new System.Drawing.Point(327, 247);
             this.lblHotel.Name = "lblHotel";
-            this.lblHotel.Size = new System.Drawing.Size(60, 23);
+            this.lblHotel.Size = new System.Drawing.Size(0, 23);
             this.lblHotel.TabIndex = 19;
-            this.lblHotel.Text = "Etage";
             // 
             // lblId
             // 
@@ -95,9 +91,8 @@ namespace GestionReservationHotel
             this.lblId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.lblId.Location = new System.Drawing.Point(327, 103);
             this.lblId.Name = "lblId";
-            this.lblId.Size = new System.Drawing.Size(60, 23);
+            this.lblId.Size = new System.Drawing.Size(0, 23);
             this.lblId.TabIndex = 18;
-            this.lblId.Text = "Etage";
             // 
             // label6
             // 

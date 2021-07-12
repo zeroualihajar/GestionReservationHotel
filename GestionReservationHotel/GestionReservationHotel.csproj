@@ -77,6 +77,12 @@
     <Compile Include="Information.Designer.cs">
       <DependentUpon>Information.cs</DependentUpon>
     </Compile>
+    <Compile Include="Liberer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Liberer.Designer.cs">
+      <DependentUpon>Liberer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\Client.cs" />
     <Compile Include="Model\Reservation.cs" />
     <Compile Include="Program.cs" />
@@ -86,6 +92,12 @@
     </Compile>
     <Compile Include="UC\ucChambre.Designer.cs">
       <DependentUpon>ucChambre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\ucClient.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\ucClient.Designer.cs">
+      <DependentUpon>ucClient.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="description.resx">
       <DependentUpon>description.cs</DependentUpon>
@@ -99,6 +111,9 @@
     <EmbeddedResource Include="Information.resx">
       <DependentUpon>Information.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Liberer.resx">
+      <DependentUpon>Liberer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -111,6 +126,9 @@
     </Compile>
     <EmbeddedResource Include="UC\ucChambre.resx">
       <DependentUpon>ucChambre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\ucClient.resx">
+      <DependentUpon>ucClient.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="DC.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
@@ -136,7 +154,9 @@
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="images\close.png" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="images\chambre.png" />
   </ItemGroup>

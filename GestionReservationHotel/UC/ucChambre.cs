@@ -32,6 +32,7 @@ namespace GestionReservationHotel
         {
             Formulaire form = new Formulaire(idChambre);
             form.Visible = true;
+            
         }
 
         private void descriptionToolStripMenuItem_Click(object sender, EventArgs e)
@@ -42,19 +43,19 @@ namespace GestionReservationHotel
 
         private void libererToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //---- Creer  la connexion vers la base des données
-            SqlConnection connect = new SqlConnection(@"Data Source=DESKTOP-7N0GOOF; Initial Catalog=ReservationHotel; Integrated Security =True");
+            try
+            {
+                Liberer lib = new Liberer(this.idChambre);
+                lib.Visible = true;
+            }
+            catch
+            {
+
+            }
             
-            //---- Ouvrir la connexion
-            connect.Open();
+            
 
-            //---- Declarer la requete de Liberation du chambre
-            SqlCommand cmd = new SqlCommand("DELETE  From reservation WHERE idchambre = "+ idChambre, connect);
-
-            cmd.ExecuteNonQuery();
-
-            //---- Fermer la connexion
-            connect.Close();
+            //this.BackgroundImage = global::GestionReservationHotel.Properties.Resources.open;
 
 
         }
