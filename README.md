@@ -1,2 +1,2 @@
 # GestionReservationHotel
- Une application de gestion des réservations d’un hôtel à travers une interface en utilisant le concept de « Contrôle Utilisateur »
+ Une application permettant la gestion des réservations d’un hôtel via une interface conviviale en utilisant le concept de « Contrôle Utilisateur »
